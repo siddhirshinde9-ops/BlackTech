@@ -1,2 +1,1 @@
-# BlackTech
-best laptop shop 
+index.html
