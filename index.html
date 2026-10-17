@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLACKTECH | Laptop Store</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #fff;
+}
+
+/* NAVBAR */
+header {
+    background: #101010;
+    border-bottom: 1px solid #242424;
+    padding: 20px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #00e5a0;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav ul a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav ul a:hover {
+    color: #00e5a0;
+}
+
+.cart {
+    background: #00e5a0;
+    color: #000;
+    padding: 11px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 75px 8%;
+    background: #0d0d0d;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content small {
+    color: #00e5a0;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #00e5a0;
+}
+
+.hero p {
+    color: #aaa;
+    line-height: 1.8;
+    max-width: 450px;
+    font-size: 15px;
+}
+
+.shop-btn {
+    display: inline-block;
+    background: #00e5a0;
+    color: #000;
+    padding: 14px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: 0.3s;
+}
+
+.shop-btn:hover {
+    background: #fff;
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    border: 1px solid #282828;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 65px 8%;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading small {
+    color: #00e5a0;
+    letter-spacing: 3px;
+}
+
+.heading h2 {
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.heading p {
+    color: #999;
+    font-size: 14px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.product-card {
+    background: #121212;
+    border: 1px solid #272727;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    border-color: #00e5a0;
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    background: #1a1a1a;
+}
+
+.product-info {
+    padding: 17px;
+}
+
+.tag {
+    color: #00e5a0;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.description {
+    color: #999;
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 42px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 17px;
+}
+
+.price {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.buy-btn {
+    background: #00e5a0;
+    color: #000;
+    padding: 9px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.buy-btn:hover {
+    background: #fff;
+}
+
+/* FEATURES */
+.features {
+    padding: 40px 8%;
+    background: #101010;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: center;
+    border-top: 1px solid #242424;
+    border-bottom: 1px solid #242424;
+}
+
+.feature {
+    padding: 20px 10px;
+}
+
+.feature h3 {
+    color: #00e5a0;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.feature p {
+    color: #999;
+    font-size: 13px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 35px 8%;
+    background: #080808;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+footer h2 span {
+    color: #00e5a0;
+}
+
+footer p {
+    color: #888;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+footer a {
+    color: #00e5a0;
+    text-decoration: none;
+}
+
+.copyright {
+    border-top: 1px solid #222;
+    margin-top: 22px;
+    padding-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav ul {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 18px;
+    }
+
+    nav ul a {
+        font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 50px 6%;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .products {
+        padding: 50px 5%;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .product-card img {
+        height: 230px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        padding: 25px 6%;
+        gap: 5px;
+    }
+
+    .heading h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav>
+        <div class="logo">BLACK<span>TECH.</span></div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Laptops</a></li>
+            <li><a href="#features">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#products" class="cart">Explore Shop ↗</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <small>WELCOME TO BLACKTECH</small>
+
+        <h1>Powerful Tech.<br>
+        <span>Smart Choice.</span></h1>
+
+        <p>
+            Discover stylish laptops for gaming, business and everyday
+            work. Find your next machine with a clean shopping experience.
+        </p>
+
+        <a href="#products" class="shop-btn">Explore Laptops →</a>
+    </div>
+
+    <div class="hero-image">
+        <img
+        src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1000&q=85"
+        alt="Laptop on a desk">
+    </div>
+</section>
+
+<!-- LAPTOP PRODUCTS -->
+<section class="products" id="products">
+    <div class="heading">
+        <small>OUR COLLECTION</small>
+        <h2>Featured Laptops</h2>
+        <p>Find the right laptop for your everyday needs.</p>
+    </div>
+
+    <div class="product-grid">
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=80" alt="MacBook laptop">
+            <div class="product-info">
+                <span class="tag">Premium</span>
+                <h3>MacBook Air</h3>
+                <p class="description">Lightweight and elegant for everyday work.</p>
+                <div class="price-row">
+                    <span class="price">₹89,999</span>
+                    <a href="#contact" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=700&q=80" alt="HP laptop">
+            <div class="product-info">
+                <span class="tag">Business</span>
+                <h3>HP Pavilion</h3>
+                <p class="description">A practical choice for office and study.</p>
+                <div class="price-row">
+                    <span class="price">₹59,999</span>
+                    <a href="#contact" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=700&q=80" alt="Gaming laptop">
+            <div class="product-info">
+                <span class="tag">Gaming</span>
+                <h3>ASUS Gaming</h3>
+                <p class="description">A bold choice for your gaming setup.</p>
+                <div class="price-row">
+                    <span class="price">₹74,999</span>
+                    <a href="#contact" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=80" alt="Lenovo laptop">
+            <div class="product-info">
+                <span class="tag">Student Choice</span>
+                <h3>Lenovo IdeaPad</h3>
+                <p class="description">Suitable for classes and projects.</p>
+                <div class="price-row">
+                    <span class="price">₹44,999</span>
+                    <a href="#contact" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=80" alt="Dell laptop">
+            <div class="product-info">
+                <span class="tag">Performance</span>
+                <h3>Dell Inspiron</h3>
+                <p class="description">Designed for work and daily tasks.</p>
+                <div class="price-row">
+                    <span class="price">₹54,999</span>
+                    <a href="#contact" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?auto=format&fit=crop&w=700&q=80" alt="Acer laptop">
+            <div class="product-info">
+                <span class="tag">Everyday</span>
+                <h3>Acer Aspire</h3>
+                <p class="description">A simple companion for daily computing.</p>
+                <div class="price-row">
+                    <span class="price">₹39,999</span>
+                    <a href="#contact" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?auto=format&fit=crop&w=700&q=80" alt="Professional laptop">
+            <div class="product-info">
+                <span class="tag">Professional</span>
+                <h3>Surface Laptop</h3>
+                <p class="description">A modern look for productivity.</p>
+                <div class="price-row">
+                    <span class="price">₹79,999</span>
+                    <a href="#contact" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://images.unsplash.com/photo-1587614382346-4ec70e388b28?auto=format&fit=crop&w=700&q=80" alt="ASUS laptop">
+            <div class="product-info">
+                <span class="tag">Work & Study</span>
+                <h3>ASUS VivoBook</h3>
+                <p class="description">A stylish laptop for everyday productivity.</p>
+                <div class="price-row">
+                    <span class="price">₹49,999</span>
+                    <a href="#contact" class="buy-btn">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+    <div class="feature">
+        <h3>🚚 Fast Delivery</h3>
+        <p>Convenient delivery options.</p>
+    </div>
+
+    <div class="feature">
+        <h3>🛡️ Quality Products</h3>
+        <p>Shop with confidence.</p>
+    </div>
+
+    <div class="feature">
+        <h3>💬 Customer Support</h3>
+        <p>Help when you need it.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="contact">
+    <h2>BLACK<span>TECH.</span></h2>
+    <p>Your next laptop starts here.</p>
+    <p>Email: hello@blacktech.example</p>
+
+    <p class="copyright">
+        © 2026 BLACKTECH. Demo website.
+    </p>
+</footer>
+
+</body>
+</html>
+
